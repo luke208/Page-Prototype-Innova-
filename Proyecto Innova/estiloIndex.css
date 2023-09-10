@@ -10,6 +10,11 @@
     src: url('Recursos/Mogra/Mogra-Regular.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'NotoB';
+    src: url('Recursos/NotoSansLinearB/NotoSansLinearB-Regular.ttf') format('truetype');
+}
+
 /*------------------------------------------------------------------------*/
 
 body{
@@ -29,7 +34,6 @@ body{
 /*Aplicado al logo de la pagina*/
 .logo{
     display: flex;
-    align-items: center;
     height: 180px;
 }
 
@@ -54,7 +58,8 @@ nav{
 /*Color de los enlaces de la barra de navegacion*/
 
 nav a{
-    display: flex;
+    display: inline-block;
+    margin-top: 25px; /*Margen hacia abajo entre los enlaces*/
     text-decoration: none;
     color:#000;
     font-family: 'Kadwa';
@@ -62,9 +67,9 @@ nav a{
 
 /*Personalizacion del boton iniciar(mediante clase)*/
 .btIniciar{
-    justify-content: flex-end;
-    border: 2px solid;
-    border-color: #FD0B53;
+    margin-left: 750px; /*Margen que se hace desde la izq, para ubicar el boton en el lugar que queria*/
+    border: 2px solid; /*Borde que le hago al enlace, para que parezca mas a un boton*/
+    border-color: #FD0B53; /*Color tanto de los bordes y del fondo de la etiqueta a*/
     background-color: #FD0B53;
 }
 
@@ -74,6 +79,7 @@ nav a{
     border-color: #ff1493;
 }
 
+/*Lo mismo se realiza con el boton de registrar*/
 .btRegistrar{
     background-color: #146BAD;
     border:2px solid;
@@ -86,10 +92,13 @@ nav a{
 }
 /*Color del dato previsualizado del Input*/
 input{
+    display: inline-block;
+    margin-left: 210px;
     background-color: #DFD1C3; /*Fondo del buscador*/
-    padding: 4px;
+    padding: 10px 80px 10px 80px;
     border:none;
     font-family: jura;
+    font-size: 16px;
 }
 
 input:focus{
@@ -97,11 +106,23 @@ input:focus{
     color:#0e0d0d; /*Color de la letra del buscador*/
 }
 
-.botonBuscador{
-    color:#523131;
-    font-family: jura;
-    padding:3px;
+.Subtitulo-del-nav{
+    display: flex;
+    margin-left: 265px;
+    font-family: 'NotoB';
+    font-size: 18px;
+    color: #0fa8d6b6;
+    margin-top: 5px;
 }
+
+.botonBuscador{
+    margin-left: 5px;
+    color:#080808;
+    font-family: 'Kadwa';
+    padding: 3px 6px 3px 6px;
+    font-size: 15px;
+}
+
 
 /*Estilo del pie de pagina*/
 footer{
