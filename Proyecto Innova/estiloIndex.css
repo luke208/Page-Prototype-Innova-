@@ -34,7 +34,8 @@ body{
 /*Aplicado al logo de la pagina*/
 .logo{
     display: flex;
-    height: 180px;
+    max-width: 100%;
+    height: auto;
 }
 
 h2{
@@ -50,7 +51,7 @@ h2{
 
 nav{
     flex-grow: 1;
-    height:180px;
+    height: 180px;
     background-color: #5e3737;
     text-decoration: none;
 }
@@ -67,7 +68,7 @@ nav a{
 
 /*Personalizacion del boton iniciar(mediante clase)*/
 .btIniciar{
-    margin-left: 750px; /*Margen que se hace desde la izq, para ubicar el boton en el lugar que queria*/
+    margin-left: 75%; /*Margen que se hace desde la izq, para ubicar el boton en el lugar que queria*/
     border: 2px solid; /*Borde que le hago al enlace, para que parezca mas a un boton*/
     border-color: #FD0B53; /*Color tanto de los bordes y del fondo de la etiqueta a*/
     background-color: #FD0B53;
@@ -81,6 +82,7 @@ nav a{
 
 /*Lo mismo se realiza con el boton de registrar*/
 .btRegistrar{
+    /*padding: auto;*/
     background-color: #146BAD;
     border:2px solid;
     border-color:#146BAD;
@@ -93,7 +95,7 @@ nav a{
 /*Color del dato previsualizado del Input*/
 input{
     display: inline-block;
-    margin-left: 210px;
+    margin-left: 22%;
     background-color: #DFD1C3; /*Fondo del buscador*/
     padding: 10px 80px 10px 80px;
     border:none;
@@ -158,8 +160,12 @@ footer img{
 
 /*Estilo de los textos de los vinculos*/
 footer h4{
-    margin-top: 20px; /*Espaciado para que no choque con los logos*/
+    margin-top: 18%; /*Espaciado para que no choque con los logos*/
+    margin-left: 40%;
     text-align: center; /*Los textos se centran*/
+}
+
+Productos{
     pointer-events: none; /*Esto hara que no se pueda ir al vinculo, seleccionando el texto*/
     position: absolute;   /*Tiene un posicionamiento libre, en este caso, lo deje por defecto*/
 }
@@ -168,4 +174,33 @@ footer h4{
     display:flex;
     align-items: center;
     padding:10px
+}
+
+@media (max-width:1180px) {
+    .btIniciar{
+        margin-left: 60%;
+    }
+    .logo{
+        max-width:60%;
+        
+    }
+}
+
+@media (max-width:866px) {
+    .btIniciar{
+        margin-left: 65%;
+    }
+    .btRegistrar{
+        margin-left:65%;
+    }
+}
+@media (max-width:768px){
+    .logo{
+        max-width:40%;
+        
+    }
+}
+
+@media (max-width:480px){
+
 }
