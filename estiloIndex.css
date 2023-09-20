@@ -1,0 +1,152 @@
+/*Aqui se agrega la fuente de letra, personalizada*/
+
+@font-face {
+    font-family: 'Kadwa';
+    src: url('Recursos/Kadwa/Kadwa-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Mogra';
+    src: url('Recursos/Mogra/Mogra-Regular.ttf') format('truetype');
+}
+
+/*------------------------------------------------------------------------*/
+
+body{
+    /*Se ocupa el margin y el padding en 0, para que elimine las lineas en blanco que hay en los contornos*/
+    /*Todos los elementos, tenian como una sangria*/
+    margin: 0;
+    padding: 0;
+}
+
+/*Aplicado al div*/
+.conteiner{
+    display:flex; /*Es el comando flex, que austa los elementos de manera automatica*/
+    align-items: center; /*Alinea verticalmente el contenido*/
+    justify-content: space-between;
+}
+
+/*Aplicado al logo de la pagina*/
+.logo{
+    display: flex;
+    align-items: center;
+    height: 180px;
+}
+
+h2{
+    font-family: 'Mogra';
+    color:#E6E6E6;
+}
+
+.seccionEstilo{
+    background-color: #231111;
+}
+
+/*Personalizacion de la barra de navegacion*/
+
+nav{
+    flex-grow: 1;
+    height:180px;
+    background-color: #5e3737;
+    text-decoration: none;
+    align-items: center;
+}
+
+/*Color de los enlaces de la barra de navegacion*/
+
+nav a{
+    display: inline-flex;
+    text-decoration: none;
+    color:#000;
+    font-family: 'Kadwa';
+}
+
+/*Personalizacion del boton iniciar(mediante clase)*/
+.btIniciar{
+    order:2;
+    padding: auto;
+    border: 2px solid;
+    border-color: #FD0B53;
+    background-color: #FD0B53;
+}
+
+/*Cuando pasas el mouse por el boton*/
+.btIniciar:hover{
+    background-color: #ff1493;
+    border-color: #ff1493;
+}
+
+.btRegistrar{
+    background-color: #146BAD;
+    border:2px solid;
+    border-color:#146BAD;
+}
+
+.btRegistrar:hover{
+    background-color:rgb(57, 241, 180);
+    border-color: rgb(57, 241, 180);
+}
+/*Color del dato previsualizado del Input*/
+input{
+    background-color: #DFD1C3; /*Fondo del buscador*/
+    padding: 4px;
+    border:none;
+    font-family: jura;
+}
+
+input:focus{
+    outline:1px solid #00c3ff;
+    color:#0e0d0d; /*Color de la letra del buscador*/
+}
+
+.botonBuscador{
+    color:#523131;
+    font-family: jura;
+    padding:3px;
+}
+
+/*Estilo del pie de pagina*/
+footer{
+    position: relative; /*Establece una posicion al contenedor en la pagina*/
+    display:flex;       /*Permite que los objetos que contenga, se pueda modificar su lugar*/
+    flex-wrap: wrap;    /*Permite que los objetos entren en la misma linea*/
+    justify-content: space-between; /*Distribuye los elementos horizontalmente*/
+    background-color: #FF7A00;
+    padding: 10px 10px 35px 10px;  /*Englobe el fondo correctamente a todos los elementos*/
+}
+
+/*Estilo de los enlaces*/
+footer a{
+    display:inline-block;  /*Como un elemento en linea, pero que agrega caracteristicas como los margenes como lo haria un bloque*/
+    text-align: center;    /*Ajusta a los elementos en el centro*/
+   /* flex:1; Lo elimine, porque ocupaba el espacio que habia libre entre los a*/
+
+    margin: 8px;
+    text-decoration: none; /*Elimina la decoracion que tiene la etiqueta, aunque no es necesario(porque la imagen que tiene es el enlace*/
+    color:#000;
+    font-weight: bold;
+    position:relative;  
+    height: 60px;  /*Toma las dimensiones de cada imagen*/
+    width: 60px;
+}
+
+/* Estilo de las imagenes que funcionan como vinculo */
+footer img{
+    width:60px;
+    height: 60px;
+    display: block;  /*En bloque, para que tome solamente las dimensiones del logo*/
+}
+
+/*Estilo de los textos de los vinculos*/
+footer h4{
+    margin-top: 20px; /*Espaciado para que no choque con los logos*/
+    text-align: center; /*Los textos se centran*/
+    pointer-events: none; /*Esto hara que no se pueda ir al vinculo, seleccionando el texto*/
+    position: absolute;   /*Tiene un posicionamiento libre, en este caso, lo deje por defecto*/
+}
+
+.red-sin-logo{
+    display:flex;
+    align-items: center;
+    padding:10px
+}
